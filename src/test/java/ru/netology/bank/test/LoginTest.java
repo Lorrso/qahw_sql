@@ -28,7 +28,7 @@ public class LoginTest {
 
     @Test
     void shouldLoginSuccessfully() {
-        var authInfo = DataHelper.generateRandomUser();
+        var authInfo = DataHelper.getAuthInfoWithTestData();
         var verificationPage = loginPage.login(authInfo);
         verificationPage.verifyVerificationPageVisibility();
         var verificationCode = SQLHelper.getVerificationCode();
